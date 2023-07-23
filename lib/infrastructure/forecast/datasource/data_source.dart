@@ -1,5 +1,5 @@
-import 'package:weather_forecast/infrastructure/forecast/models/forecast_dto.dart';
+import 'package:weather_forecast/infrastructure/forecast/models/response_dto.dart';
 
 abstract class DataSource {
-  Future<ForecastDto> getWeatherForecast(String query);
+  Future<ResponseDto> getWeatherForecast(String query);
 }
