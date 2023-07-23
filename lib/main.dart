@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_forecast/application/features/forecast/forecast_cubit.dart';
 
-void main() {
+import 'injection.dart';
+
+Future<void> main() async {
+  await setUp();
   runApp(const MyApp());
 }
 
@@ -9,11 +14,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return BlocProvider(
+      create: (context) => getIt.get<ForecastCubit>(),
+      child: MaterialApp(
         title: 'Weather Forecast',
         theme: ThemeData.light(
           useMaterial3: true,
         ),
-        home: const Placeholder());
+        debugShowCheckedModeBanner: false,
+        home: const Placeholder(),
+      ),
+    );
   }
 }
