@@ -8,6 +8,7 @@ class ApiConstants {
 }
 
 class ErrorMessages {
+  // api
   static const String noInternetError =
       'No internet found, please connect to the internet';
   static const String generalErrorMessage =
@@ -15,5 +16,10 @@ class ErrorMessages {
   static const String fetchApiErrorMessage =
       'Error getting weather forecast for city:';
 
+  // location
   static const failedToGetCity = 'Failed to get city from this location';
+  static const locationServiceDisabled = 'Location services are disabled.';
+  static const locationPermissionDenied = 'Location permissions are denied';
+  static const locationPermissionDeniedForever =
+      'Location permissions are permanently denied, we cannot request permissions.';
 }

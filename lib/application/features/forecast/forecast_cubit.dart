@@ -4,6 +4,7 @@ import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:geocoding/geocoding.dart';
 import 'package:geolocator/geolocator.dart';
+import 'package:weather_forecast/application/features/forecast/location_response.dart';
 import 'package:weather_forecast/application/utils/app_constants.dart';
 import 'package:weather_forecast/domain/forecast_repository.dart';
 import 'package:weather_forecast/domain/models/forecast.dart';
@@ -40,22 +41,24 @@ class ForecastCubit extends Cubit<ForecastState> {
     }
   }
 
-  Future<String> getCityFromLocation() async {
+  Future<LocationResponse> getCityFromLocation() async {
     try {
       final serviceEnabled = await Geolocator.isLocationServiceEnabled();
       if (!serviceEnabled) {
-        return Future.error('Location services are disabled.');
+        return const LocationResponse.error(
+            ErrorMessages.locationServiceDisabled);
       }
       LocationPermission permission = await Geolocator.checkPermission();
       if (permission == LocationPermission.denied) {
         permission = await Geolocator.requestPermission();
         if (permission == LocationPermission.denied) {
-          return Future.error('Location permissions are denied');
+          return const LocationResponse.error(
+              ErrorMessages.locationPermissionDenied);
         }
       }
       if (permission == LocationPermission.deniedForever) {
-        return Future.error(
-            'Location permissions are permanently denied, we cannot request permissions.');
+        return const LocationResponse.error(
+            ErrorMessages.locationPermissionDeniedForever);
       }
       final position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.high);
@@ -65,11 +68,12 @@ class ForecastCubit extends Cubit<ForecastState> {
 
       if (placeMarks.first.locality != null &&
           placeMarks.first.country != null) {
-        return '${placeMarks.first.country}, ${placeMarks.first.locality}';
+        return LocationResponse.success(
+            '${placeMarks.first.country}, ${placeMarks.first.locality}');
       }
-      return '';
+      return const LocationResponse.error(ErrorMessages.failedToGetCity);
     } catch (e) {
-      throw Exception(ErrorMessages.failedToGetCity);
+      return const LocationResponse.error(ErrorMessages.failedToGetCity);
     }
   }
 }
