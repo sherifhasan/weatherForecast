@@ -14,4 +14,6 @@ class ErrorMessages {
       'Something went wrong, Please retry again';
   static const String fetchApiErrorMessage =
       'Error getting weather forecast for city:';
+
+  static const failedToGetCity = 'Failed to get city from this location';
 }
