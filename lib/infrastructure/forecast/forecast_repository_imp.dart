@@ -3,7 +3,7 @@ import 'dart:io';
 import 'package:weather_forecast/application/utils/app_constants.dart';
 import 'package:weather_forecast/domain/forecast_repository.dart';
 import 'package:weather_forecast/infrastructure/forecast/datasource/data_source.dart';
-import 'package:weather_forecast/infrastructure/forecast/models/forecast_dto.dart';
+import 'package:weather_forecast/infrastructure/forecast/models/response_dto.dart';
 
 class ForecastRepositoryImpl extends ForecastRepository {
   final DataSource _remoteDataSource;
@@ -11,7 +11,7 @@ class ForecastRepositoryImpl extends ForecastRepository {
   ForecastRepositoryImpl(this._remoteDataSource);
 
   @override
-  Future<ForecastDto> getWeatherForecast(String query) async {
+  Future<ResponseDto> getWeatherForecast(String query) async {
     try {
       return await _remoteDataSource.getWeatherForecast(query);
     } on SocketException {
