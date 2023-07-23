@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:weather_forecast/domain/models/forecast.dart';
 
 part 'forecast_dto.freezed.dart';
 
@@ -16,6 +17,9 @@ class ForecastDto with _$ForecastDto {
 
   factory ForecastDto.fromJson(Map<String, dynamic> json) =>
       _$ForecastDtoFromJson(json);
+
+  Forecast toEntity() =>
+      Forecast(location: location.toEntity(), current: current.toEntity());
 }
 
 @freezed
@@ -43,6 +47,24 @@ class CurrentDto with _$CurrentDto {
 
   factory CurrentDto.fromJson(Map<String, dynamic> json) =>
       _$CurrentDtoFromJson(json);
+
+  Current toEntity() => Current(
+      observationTime: observationTime,
+      temperature: temperature,
+      weatherCode: weatherCode,
+      weatherIcons: weatherIcons,
+      weatherDescriptions: weatherDescriptions,
+      windSpeed: windSpeed,
+      windDegree: windDegree,
+      windDir: windDir,
+      pressure: pressure,
+      precip: precip,
+      humidity: humidity,
+      cloudcover: cloudcover,
+      feelslike: feelslike,
+      uvIndex: uvIndex,
+      visibility: visibility,
+      isDay: isDay);
 }
 
 @freezed
@@ -63,10 +85,21 @@ class LocationDto with _$LocationDto {
 
   factory LocationDto.fromJson(Map<String, dynamic> json) =>
       _$LocationDtoFromJson(json);
+
+  Location toEntity() => Location(
+      name: name,
+      country: country,
+      region: region,
+      lat: lat,
+      lon: lon,
+      timezoneId: timezoneId,
+      localtime: localtime,
+      localtimeEpoch: localtimeEpoch,
+      utcOffset: utcOffset);
 }
 
 @freezed
-class RequestDto with _$LocationDto {
+class RequestDto with _$RequestDto {
   const factory RequestDto({
     required String type,
     required String query,
