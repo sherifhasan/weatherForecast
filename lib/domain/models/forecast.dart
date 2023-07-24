@@ -38,11 +38,6 @@ class Location with _$Location {
     required String name,
     required String country,
     required String region,
-    required String lat,
-    required String lon,
-    required String timezoneId,
     required String localtime,
-    required int localtimeEpoch,
-    required String utcOffset,
   }) = _Location;
 }

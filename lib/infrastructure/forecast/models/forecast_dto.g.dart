@@ -22,46 +22,46 @@ Map<String, dynamic> _$$_ForecastDtoToJson(_$_ForecastDto instance) =>
 
 _$_CurrentDto _$$_CurrentDtoFromJson(Map<String, dynamic> json) =>
     _$_CurrentDto(
-      observationTime: json['observationTime'] as String,
+      observationTime: json['observation_time'] as String,
+      weatherCode: json['weather_code'] as int,
+      weatherIcons: (json['weather_icons'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      weatherDescriptions: (json['weather_descriptions'] as List<dynamic>)
+          .map((e) => e as String)
+          .toList(),
+      windSpeed: json['wind_speed'] as int,
+      windDegree: json['wind_degree'] as int,
+      windDir: json['wind_dir'] as String,
+      uvIndex: json['uv_index'] as int,
+      cloudCover: json['cloudcover'] as int,
+      isDay: json['is_day'] as String,
+      feelsLike: json['feelslike'] as int,
       temperature: json['temperature'] as int,
-      weatherCode: json['weatherCode'] as int,
-      weatherIcons: (json['weatherIcons'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      weatherDescriptions: (json['weatherDescriptions'] as List<dynamic>)
-          .map((e) => e as String)
-          .toList(),
-      windSpeed: json['windSpeed'] as int,
-      windDegree: json['windDegree'] as int,
-      windDir: json['windDir'] as String,
       pressure: json['pressure'] as int,
       precip: json['precip'] as int,
       humidity: json['humidity'] as int,
-      cloudcover: json['cloudcover'] as int,
-      feelslike: json['feelslike'] as int,
-      uvIndex: json['uvIndex'] as int,
       visibility: json['visibility'] as int,
-      isDay: json['isDay'] as String,
     );
 
 Map<String, dynamic> _$$_CurrentDtoToJson(_$_CurrentDto instance) =>
     <String, dynamic>{
-      'observationTime': instance.observationTime,
+      'observation_time': instance.observationTime,
+      'weather_code': instance.weatherCode,
+      'weather_icons': instance.weatherIcons,
+      'weather_descriptions': instance.weatherDescriptions,
+      'wind_speed': instance.windSpeed,
+      'wind_degree': instance.windDegree,
+      'wind_dir': instance.windDir,
+      'uv_index': instance.uvIndex,
+      'cloudcover': instance.cloudCover,
+      'is_day': instance.isDay,
+      'feelslike': instance.feelsLike,
       'temperature': instance.temperature,
-      'weatherCode': instance.weatherCode,
-      'weatherIcons': instance.weatherIcons,
-      'weatherDescriptions': instance.weatherDescriptions,
-      'windSpeed': instance.windSpeed,
-      'windDegree': instance.windDegree,
-      'windDir': instance.windDir,
       'pressure': instance.pressure,
       'precip': instance.precip,
       'humidity': instance.humidity,
-      'cloudcover': instance.cloudcover,
-      'feelslike': instance.feelslike,
-      'uvIndex': instance.uvIndex,
       'visibility': instance.visibility,
-      'isDay': instance.isDay,
     };
 
 _$_LocationDto _$$_LocationDtoFromJson(Map<String, dynamic> json) =>
@@ -69,12 +69,7 @@ _$_LocationDto _$$_LocationDtoFromJson(Map<String, dynamic> json) =>
       name: json['name'] as String,
       country: json['country'] as String,
       region: json['region'] as String,
-      lat: json['lat'] as String,
-      lon: json['lon'] as String,
-      timezoneId: json['timezoneId'] as String,
       localtime: json['localtime'] as String,
-      localtimeEpoch: json['localtimeEpoch'] as int,
-      utcOffset: json['utcOffset'] as String,
     );
 
 Map<String, dynamic> _$$_LocationDtoToJson(_$_LocationDto instance) =>
@@ -82,12 +77,7 @@ Map<String, dynamic> _$$_LocationDtoToJson(_$_LocationDto instance) =>
       'name': instance.name,
       'country': instance.country,
       'region': instance.region,
-      'lat': instance.lat,
-      'lon': instance.lon,
-      'timezoneId': instance.timezoneId,
       'localtime': instance.localtime,
-      'localtimeEpoch': instance.localtimeEpoch,
-      'utcOffset': instance.utcOffset,
     };
 
 _$_RequestDto _$$_RequestDtoFromJson(Map<String, dynamic> json) =>

@@ -17,7 +17,7 @@ class RemoteDataSourceImpl extends DataSource {
         return ResponseDto.failure(
             '${ErrorMessages.fetchApiErrorMessage}: $query');
       }
-      final data = json.decode(utf8.decode(response.bodyBytes));
+      final data = json.decode(response.body);
       return ResponseDto.success(ForecastDto.fromJson(data));
     } on SocketException {
       throw const SocketException(ErrorMessages.noInternetError);

@@ -248,22 +248,33 @@ CurrentDto _$CurrentDtoFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$CurrentDto {
+  @JsonKey(name: 'observation_time')
   String get observationTime => throw _privateConstructorUsedError;
-  int get temperature => throw _privateConstructorUsedError;
+  @JsonKey(name: 'weather_code')
   int get weatherCode => throw _privateConstructorUsedError;
+  @JsonKey(name: 'weather_icons')
   List<String> get weatherIcons => throw _privateConstructorUsedError;
+  @JsonKey(name: 'weather_descriptions')
   List<String> get weatherDescriptions => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_speed')
   int get windSpeed => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_degree')
   int get windDegree => throw _privateConstructorUsedError;
+  @JsonKey(name: 'wind_dir')
   String get windDir => throw _privateConstructorUsedError;
+  @JsonKey(name: 'uv_index')
+  int get uvIndex => throw _privateConstructorUsedError;
+  @JsonKey(name: 'cloudcover')
+  int get cloudCover => throw _privateConstructorUsedError;
+  @JsonKey(name: 'is_day')
+  String get isDay => throw _privateConstructorUsedError;
+  @JsonKey(name: 'feelslike')
+  int get feelsLike => throw _privateConstructorUsedError;
+  int get temperature => throw _privateConstructorUsedError;
   int get pressure => throw _privateConstructorUsedError;
   int get precip => throw _privateConstructorUsedError;
   int get humidity => throw _privateConstructorUsedError;
-  int get cloudcover => throw _privateConstructorUsedError;
-  int get feelslike => throw _privateConstructorUsedError;
-  int get uvIndex => throw _privateConstructorUsedError;
   int get visibility => throw _privateConstructorUsedError;
-  String get isDay => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -278,22 +289,22 @@ abstract class $CurrentDtoCopyWith<$Res> {
       _$CurrentDtoCopyWithImpl<$Res, CurrentDto>;
   @useResult
   $Res call(
-      {String observationTime,
+      {@JsonKey(name: 'observation_time') String observationTime,
+      @JsonKey(name: 'weather_code') int weatherCode,
+      @JsonKey(name: 'weather_icons') List<String> weatherIcons,
+      @JsonKey(name: 'weather_descriptions') List<String> weatherDescriptions,
+      @JsonKey(name: 'wind_speed') int windSpeed,
+      @JsonKey(name: 'wind_degree') int windDegree,
+      @JsonKey(name: 'wind_dir') String windDir,
+      @JsonKey(name: 'uv_index') int uvIndex,
+      @JsonKey(name: 'cloudcover') int cloudCover,
+      @JsonKey(name: 'is_day') String isDay,
+      @JsonKey(name: 'feelslike') int feelsLike,
       int temperature,
-      int weatherCode,
-      List<String> weatherIcons,
-      List<String> weatherDescriptions,
-      int windSpeed,
-      int windDegree,
-      String windDir,
       int pressure,
       int precip,
       int humidity,
-      int cloudcover,
-      int feelslike,
-      int uvIndex,
-      int visibility,
-      String isDay});
+      int visibility});
 }
 
 /// @nodoc
@@ -310,31 +321,27 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
   @override
   $Res call({
     Object? observationTime = null,
-    Object? temperature = null,
     Object? weatherCode = null,
     Object? weatherIcons = null,
     Object? weatherDescriptions = null,
     Object? windSpeed = null,
     Object? windDegree = null,
     Object? windDir = null,
+    Object? uvIndex = null,
+    Object? cloudCover = null,
+    Object? isDay = null,
+    Object? feelsLike = null,
+    Object? temperature = null,
     Object? pressure = null,
     Object? precip = null,
     Object? humidity = null,
-    Object? cloudcover = null,
-    Object? feelslike = null,
-    Object? uvIndex = null,
     Object? visibility = null,
-    Object? isDay = null,
   }) {
     return _then(_value.copyWith(
       observationTime: null == observationTime
           ? _value.observationTime
           : observationTime // ignore: cast_nullable_to_non_nullable
               as String,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as int,
       weatherCode: null == weatherCode
           ? _value.weatherCode
           : weatherCode // ignore: cast_nullable_to_non_nullable
@@ -359,6 +366,26 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
               as String,
+      uvIndex: null == uvIndex
+          ? _value.uvIndex
+          : uvIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      cloudCover: null == cloudCover
+          ? _value.cloudCover
+          : cloudCover // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDay: null == isDay
+          ? _value.isDay
+          : isDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      feelsLike: null == feelsLike
+          ? _value.feelsLike
+          : feelsLike // ignore: cast_nullable_to_non_nullable
+              as int,
+      temperature: null == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as int,
       pressure: null == pressure
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
@@ -371,26 +398,10 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as int,
-      cloudcover: null == cloudcover
-          ? _value.cloudcover
-          : cloudcover // ignore: cast_nullable_to_non_nullable
-              as int,
-      feelslike: null == feelslike
-          ? _value.feelslike
-          : feelslike // ignore: cast_nullable_to_non_nullable
-              as int,
-      uvIndex: null == uvIndex
-          ? _value.uvIndex
-          : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       visibility: null == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as int,
-      isDay: null == isDay
-          ? _value.isDay
-          : isDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 }
@@ -404,22 +415,22 @@ abstract class _$$_CurrentDtoCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {String observationTime,
+      {@JsonKey(name: 'observation_time') String observationTime,
+      @JsonKey(name: 'weather_code') int weatherCode,
+      @JsonKey(name: 'weather_icons') List<String> weatherIcons,
+      @JsonKey(name: 'weather_descriptions') List<String> weatherDescriptions,
+      @JsonKey(name: 'wind_speed') int windSpeed,
+      @JsonKey(name: 'wind_degree') int windDegree,
+      @JsonKey(name: 'wind_dir') String windDir,
+      @JsonKey(name: 'uv_index') int uvIndex,
+      @JsonKey(name: 'cloudcover') int cloudCover,
+      @JsonKey(name: 'is_day') String isDay,
+      @JsonKey(name: 'feelslike') int feelsLike,
       int temperature,
-      int weatherCode,
-      List<String> weatherIcons,
-      List<String> weatherDescriptions,
-      int windSpeed,
-      int windDegree,
-      String windDir,
       int pressure,
       int precip,
       int humidity,
-      int cloudcover,
-      int feelslike,
-      int uvIndex,
-      int visibility,
-      String isDay});
+      int visibility});
 }
 
 /// @nodoc
@@ -434,31 +445,27 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
   @override
   $Res call({
     Object? observationTime = null,
-    Object? temperature = null,
     Object? weatherCode = null,
     Object? weatherIcons = null,
     Object? weatherDescriptions = null,
     Object? windSpeed = null,
     Object? windDegree = null,
     Object? windDir = null,
+    Object? uvIndex = null,
+    Object? cloudCover = null,
+    Object? isDay = null,
+    Object? feelsLike = null,
+    Object? temperature = null,
     Object? pressure = null,
     Object? precip = null,
     Object? humidity = null,
-    Object? cloudcover = null,
-    Object? feelslike = null,
-    Object? uvIndex = null,
     Object? visibility = null,
-    Object? isDay = null,
   }) {
     return _then(_$_CurrentDto(
       observationTime: null == observationTime
           ? _value.observationTime
           : observationTime // ignore: cast_nullable_to_non_nullable
               as String,
-      temperature: null == temperature
-          ? _value.temperature
-          : temperature // ignore: cast_nullable_to_non_nullable
-              as int,
       weatherCode: null == weatherCode
           ? _value.weatherCode
           : weatherCode // ignore: cast_nullable_to_non_nullable
@@ -483,6 +490,26 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
               as String,
+      uvIndex: null == uvIndex
+          ? _value.uvIndex
+          : uvIndex // ignore: cast_nullable_to_non_nullable
+              as int,
+      cloudCover: null == cloudCover
+          ? _value.cloudCover
+          : cloudCover // ignore: cast_nullable_to_non_nullable
+              as int,
+      isDay: null == isDay
+          ? _value.isDay
+          : isDay // ignore: cast_nullable_to_non_nullable
+              as String,
+      feelsLike: null == feelsLike
+          ? _value.feelsLike
+          : feelsLike // ignore: cast_nullable_to_non_nullable
+              as int,
+      temperature: null == temperature
+          ? _value.temperature
+          : temperature // ignore: cast_nullable_to_non_nullable
+              as int,
       pressure: null == pressure
           ? _value.pressure
           : pressure // ignore: cast_nullable_to_non_nullable
@@ -495,26 +522,10 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
               as int,
-      cloudcover: null == cloudcover
-          ? _value.cloudcover
-          : cloudcover // ignore: cast_nullable_to_non_nullable
-              as int,
-      feelslike: null == feelslike
-          ? _value.feelslike
-          : feelslike // ignore: cast_nullable_to_non_nullable
-              as int,
-      uvIndex: null == uvIndex
-          ? _value.uvIndex
-          : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       visibility: null == visibility
           ? _value.visibility
           : visibility // ignore: cast_nullable_to_non_nullable
               as int,
-      isDay: null == isDay
-          ? _value.isDay
-          : isDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -523,22 +534,23 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_CurrentDto extends _CurrentDto {
   const _$_CurrentDto(
-      {required this.observationTime,
-      required this.temperature,
-      required this.weatherCode,
-      required final List<String> weatherIcons,
+      {@JsonKey(name: 'observation_time') required this.observationTime,
+      @JsonKey(name: 'weather_code') required this.weatherCode,
+      @JsonKey(name: 'weather_icons') required final List<String> weatherIcons,
+      @JsonKey(name: 'weather_descriptions')
       required final List<String> weatherDescriptions,
-      required this.windSpeed,
-      required this.windDegree,
-      required this.windDir,
+      @JsonKey(name: 'wind_speed') required this.windSpeed,
+      @JsonKey(name: 'wind_degree') required this.windDegree,
+      @JsonKey(name: 'wind_dir') required this.windDir,
+      @JsonKey(name: 'uv_index') required this.uvIndex,
+      @JsonKey(name: 'cloudcover') required this.cloudCover,
+      @JsonKey(name: 'is_day') required this.isDay,
+      @JsonKey(name: 'feelslike') required this.feelsLike,
+      required this.temperature,
       required this.pressure,
       required this.precip,
       required this.humidity,
-      required this.cloudcover,
-      required this.feelslike,
-      required this.uvIndex,
-      required this.visibility,
-      required this.isDay})
+      required this.visibility})
       : _weatherIcons = weatherIcons,
         _weatherDescriptions = weatherDescriptions,
         super._();
@@ -547,13 +559,14 @@ class _$_CurrentDto extends _CurrentDto {
       _$$_CurrentDtoFromJson(json);
 
   @override
+  @JsonKey(name: 'observation_time')
   final String observationTime;
   @override
-  final int temperature;
-  @override
+  @JsonKey(name: 'weather_code')
   final int weatherCode;
   final List<String> _weatherIcons;
   @override
+  @JsonKey(name: 'weather_icons')
   List<String> get weatherIcons {
     if (_weatherIcons is EqualUnmodifiableListView) return _weatherIcons;
     // ignore: implicit_dynamic_type
@@ -562,6 +575,7 @@ class _$_CurrentDto extends _CurrentDto {
 
   final List<String> _weatherDescriptions;
   @override
+  @JsonKey(name: 'weather_descriptions')
   List<String> get weatherDescriptions {
     if (_weatherDescriptions is EqualUnmodifiableListView)
       return _weatherDescriptions;
@@ -570,11 +584,28 @@ class _$_CurrentDto extends _CurrentDto {
   }
 
   @override
+  @JsonKey(name: 'wind_speed')
   final int windSpeed;
   @override
+  @JsonKey(name: 'wind_degree')
   final int windDegree;
   @override
+  @JsonKey(name: 'wind_dir')
   final String windDir;
+  @override
+  @JsonKey(name: 'uv_index')
+  final int uvIndex;
+  @override
+  @JsonKey(name: 'cloudcover')
+  final int cloudCover;
+  @override
+  @JsonKey(name: 'is_day')
+  final String isDay;
+  @override
+  @JsonKey(name: 'feelslike')
+  final int feelsLike;
+  @override
+  final int temperature;
   @override
   final int pressure;
   @override
@@ -582,19 +613,11 @@ class _$_CurrentDto extends _CurrentDto {
   @override
   final int humidity;
   @override
-  final int cloudcover;
-  @override
-  final int feelslike;
-  @override
-  final int uvIndex;
-  @override
   final int visibility;
-  @override
-  final String isDay;
 
   @override
   String toString() {
-    return 'CurrentDto(observationTime: $observationTime, temperature: $temperature, weatherCode: $weatherCode, weatherIcons: $weatherIcons, weatherDescriptions: $weatherDescriptions, windSpeed: $windSpeed, windDegree: $windDegree, windDir: $windDir, pressure: $pressure, precip: $precip, humidity: $humidity, cloudcover: $cloudcover, feelslike: $feelslike, uvIndex: $uvIndex, visibility: $visibility, isDay: $isDay)';
+    return 'CurrentDto(observationTime: $observationTime, weatherCode: $weatherCode, weatherIcons: $weatherIcons, weatherDescriptions: $weatherDescriptions, windSpeed: $windSpeed, windDegree: $windDegree, windDir: $windDir, uvIndex: $uvIndex, cloudCover: $cloudCover, isDay: $isDay, feelsLike: $feelsLike, temperature: $temperature, pressure: $pressure, precip: $precip, humidity: $humidity, visibility: $visibility)';
   }
 
   @override
@@ -604,8 +627,6 @@ class _$_CurrentDto extends _CurrentDto {
             other is _$_CurrentDto &&
             (identical(other.observationTime, observationTime) ||
                 other.observationTime == observationTime) &&
-            (identical(other.temperature, temperature) ||
-                other.temperature == temperature) &&
             (identical(other.weatherCode, weatherCode) ||
                 other.weatherCode == weatherCode) &&
             const DeepCollectionEquality()
@@ -617,19 +638,21 @@ class _$_CurrentDto extends _CurrentDto {
             (identical(other.windDegree, windDegree) ||
                 other.windDegree == windDegree) &&
             (identical(other.windDir, windDir) || other.windDir == windDir) &&
+            (identical(other.uvIndex, uvIndex) || other.uvIndex == uvIndex) &&
+            (identical(other.cloudCover, cloudCover) ||
+                other.cloudCover == cloudCover) &&
+            (identical(other.isDay, isDay) || other.isDay == isDay) &&
+            (identical(other.feelsLike, feelsLike) ||
+                other.feelsLike == feelsLike) &&
+            (identical(other.temperature, temperature) ||
+                other.temperature == temperature) &&
             (identical(other.pressure, pressure) ||
                 other.pressure == pressure) &&
             (identical(other.precip, precip) || other.precip == precip) &&
             (identical(other.humidity, humidity) ||
                 other.humidity == humidity) &&
-            (identical(other.cloudcover, cloudcover) ||
-                other.cloudcover == cloudcover) &&
-            (identical(other.feelslike, feelslike) ||
-                other.feelslike == feelslike) &&
-            (identical(other.uvIndex, uvIndex) || other.uvIndex == uvIndex) &&
             (identical(other.visibility, visibility) ||
-                other.visibility == visibility) &&
-            (identical(other.isDay, isDay) || other.isDay == isDay));
+                other.visibility == visibility));
   }
 
   @JsonKey(ignore: true)
@@ -637,21 +660,21 @@ class _$_CurrentDto extends _CurrentDto {
   int get hashCode => Object.hash(
       runtimeType,
       observationTime,
-      temperature,
       weatherCode,
       const DeepCollectionEquality().hash(_weatherIcons),
       const DeepCollectionEquality().hash(_weatherDescriptions),
       windSpeed,
       windDegree,
       windDir,
+      uvIndex,
+      cloudCover,
+      isDay,
+      feelsLike,
+      temperature,
       pressure,
       precip,
       humidity,
-      cloudcover,
-      feelslike,
-      uvIndex,
-      visibility,
-      isDay);
+      visibility);
 
   @JsonKey(ignore: true)
   @override
@@ -669,43 +692,63 @@ class _$_CurrentDto extends _CurrentDto {
 
 abstract class _CurrentDto extends CurrentDto {
   const factory _CurrentDto(
-      {required final String observationTime,
-      required final int temperature,
-      required final int weatherCode,
-      required final List<String> weatherIcons,
+      {@JsonKey(name: 'observation_time') required final String observationTime,
+      @JsonKey(name: 'weather_code') required final int weatherCode,
+      @JsonKey(name: 'weather_icons') required final List<String> weatherIcons,
+      @JsonKey(name: 'weather_descriptions')
       required final List<String> weatherDescriptions,
-      required final int windSpeed,
-      required final int windDegree,
-      required final String windDir,
+      @JsonKey(name: 'wind_speed') required final int windSpeed,
+      @JsonKey(name: 'wind_degree') required final int windDegree,
+      @JsonKey(name: 'wind_dir') required final String windDir,
+      @JsonKey(name: 'uv_index') required final int uvIndex,
+      @JsonKey(name: 'cloudcover') required final int cloudCover,
+      @JsonKey(name: 'is_day') required final String isDay,
+      @JsonKey(name: 'feelslike') required final int feelsLike,
+      required final int temperature,
       required final int pressure,
       required final int precip,
       required final int humidity,
-      required final int cloudcover,
-      required final int feelslike,
-      required final int uvIndex,
-      required final int visibility,
-      required final String isDay}) = _$_CurrentDto;
+      required final int visibility}) = _$_CurrentDto;
   const _CurrentDto._() : super._();
 
   factory _CurrentDto.fromJson(Map<String, dynamic> json) =
       _$_CurrentDto.fromJson;
 
   @override
+  @JsonKey(name: 'observation_time')
   String get observationTime;
   @override
-  int get temperature;
-  @override
+  @JsonKey(name: 'weather_code')
   int get weatherCode;
   @override
+  @JsonKey(name: 'weather_icons')
   List<String> get weatherIcons;
   @override
+  @JsonKey(name: 'weather_descriptions')
   List<String> get weatherDescriptions;
   @override
+  @JsonKey(name: 'wind_speed')
   int get windSpeed;
   @override
+  @JsonKey(name: 'wind_degree')
   int get windDegree;
   @override
+  @JsonKey(name: 'wind_dir')
   String get windDir;
+  @override
+  @JsonKey(name: 'uv_index')
+  int get uvIndex;
+  @override
+  @JsonKey(name: 'cloudcover')
+  int get cloudCover;
+  @override
+  @JsonKey(name: 'is_day')
+  String get isDay;
+  @override
+  @JsonKey(name: 'feelslike')
+  int get feelsLike;
+  @override
+  int get temperature;
   @override
   int get pressure;
   @override
@@ -713,15 +756,7 @@ abstract class _CurrentDto extends CurrentDto {
   @override
   int get humidity;
   @override
-  int get cloudcover;
-  @override
-  int get feelslike;
-  @override
-  int get uvIndex;
-  @override
   int get visibility;
-  @override
-  String get isDay;
   @override
   @JsonKey(ignore: true)
   _$$_CurrentDtoCopyWith<_$_CurrentDto> get copyWith =>
@@ -737,12 +772,7 @@ mixin _$LocationDto {
   String get name => throw _privateConstructorUsedError;
   String get country => throw _privateConstructorUsedError;
   String get region => throw _privateConstructorUsedError;
-  String get lat => throw _privateConstructorUsedError;
-  String get lon => throw _privateConstructorUsedError;
-  String get timezoneId => throw _privateConstructorUsedError;
   String get localtime => throw _privateConstructorUsedError;
-  int get localtimeEpoch => throw _privateConstructorUsedError;
-  String get utcOffset => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -756,16 +786,7 @@ abstract class $LocationDtoCopyWith<$Res> {
           LocationDto value, $Res Function(LocationDto) then) =
       _$LocationDtoCopyWithImpl<$Res, LocationDto>;
   @useResult
-  $Res call(
-      {String name,
-      String country,
-      String region,
-      String lat,
-      String lon,
-      String timezoneId,
-      String localtime,
-      int localtimeEpoch,
-      String utcOffset});
+  $Res call({String name, String country, String region, String localtime});
 }
 
 /// @nodoc
@@ -784,12 +805,7 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
     Object? name = null,
     Object? country = null,
     Object? region = null,
-    Object? lat = null,
-    Object? lon = null,
-    Object? timezoneId = null,
     Object? localtime = null,
-    Object? localtimeEpoch = null,
-    Object? utcOffset = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -804,29 +820,9 @@ class _$LocationDtoCopyWithImpl<$Res, $Val extends LocationDto>
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      lat: null == lat
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as String,
-      lon: null == lon
-          ? _value.lon
-          : lon // ignore: cast_nullable_to_non_nullable
-              as String,
-      timezoneId: null == timezoneId
-          ? _value.timezoneId
-          : timezoneId // ignore: cast_nullable_to_non_nullable
-              as String,
       localtime: null == localtime
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
-              as String,
-      localtimeEpoch: null == localtimeEpoch
-          ? _value.localtimeEpoch
-          : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int,
-      utcOffset: null == utcOffset
-          ? _value.utcOffset
-          : utcOffset // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -840,16 +836,7 @@ abstract class _$$_LocationDtoCopyWith<$Res>
       __$$_LocationDtoCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String country,
-      String region,
-      String lat,
-      String lon,
-      String timezoneId,
-      String localtime,
-      int localtimeEpoch,
-      String utcOffset});
+  $Res call({String name, String country, String region, String localtime});
 }
 
 /// @nodoc
@@ -866,12 +853,7 @@ class __$$_LocationDtoCopyWithImpl<$Res>
     Object? name = null,
     Object? country = null,
     Object? region = null,
-    Object? lat = null,
-    Object? lon = null,
-    Object? timezoneId = null,
     Object? localtime = null,
-    Object? localtimeEpoch = null,
-    Object? utcOffset = null,
   }) {
     return _then(_$_LocationDto(
       name: null == name
@@ -886,29 +868,9 @@ class __$$_LocationDtoCopyWithImpl<$Res>
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      lat: null == lat
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as String,
-      lon: null == lon
-          ? _value.lon
-          : lon // ignore: cast_nullable_to_non_nullable
-              as String,
-      timezoneId: null == timezoneId
-          ? _value.timezoneId
-          : timezoneId // ignore: cast_nullable_to_non_nullable
-              as String,
       localtime: null == localtime
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
-              as String,
-      localtimeEpoch: null == localtimeEpoch
-          ? _value.localtimeEpoch
-          : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int,
-      utcOffset: null == utcOffset
-          ? _value.utcOffset
-          : utcOffset // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -921,12 +883,7 @@ class _$_LocationDto extends _LocationDto {
       {required this.name,
       required this.country,
       required this.region,
-      required this.lat,
-      required this.lon,
-      required this.timezoneId,
-      required this.localtime,
-      required this.localtimeEpoch,
-      required this.utcOffset})
+      required this.localtime})
       : super._();
 
   factory _$_LocationDto.fromJson(Map<String, dynamic> json) =>
@@ -939,21 +896,11 @@ class _$_LocationDto extends _LocationDto {
   @override
   final String region;
   @override
-  final String lat;
-  @override
-  final String lon;
-  @override
-  final String timezoneId;
-  @override
   final String localtime;
-  @override
-  final int localtimeEpoch;
-  @override
-  final String utcOffset;
 
   @override
   String toString() {
-    return 'LocationDto(name: $name, country: $country, region: $region, lat: $lat, lon: $lon, timezoneId: $timezoneId, localtime: $localtime, localtimeEpoch: $localtimeEpoch, utcOffset: $utcOffset)';
+    return 'LocationDto(name: $name, country: $country, region: $region, localtime: $localtime)';
   }
 
   @override
@@ -964,22 +911,14 @@ class _$_LocationDto extends _LocationDto {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.country, country) || other.country == country) &&
             (identical(other.region, region) || other.region == region) &&
-            (identical(other.lat, lat) || other.lat == lat) &&
-            (identical(other.lon, lon) || other.lon == lon) &&
-            (identical(other.timezoneId, timezoneId) ||
-                other.timezoneId == timezoneId) &&
             (identical(other.localtime, localtime) ||
-                other.localtime == localtime) &&
-            (identical(other.localtimeEpoch, localtimeEpoch) ||
-                other.localtimeEpoch == localtimeEpoch) &&
-            (identical(other.utcOffset, utcOffset) ||
-                other.utcOffset == utcOffset));
+                other.localtime == localtime));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, name, country, region, lat, lon,
-      timezoneId, localtime, localtimeEpoch, utcOffset);
+  int get hashCode =>
+      Object.hash(runtimeType, name, country, region, localtime);
 
   @JsonKey(ignore: true)
   @override
@@ -1000,12 +939,7 @@ abstract class _LocationDto extends LocationDto {
       {required final String name,
       required final String country,
       required final String region,
-      required final String lat,
-      required final String lon,
-      required final String timezoneId,
-      required final String localtime,
-      required final int localtimeEpoch,
-      required final String utcOffset}) = _$_LocationDto;
+      required final String localtime}) = _$_LocationDto;
   const _LocationDto._() : super._();
 
   factory _LocationDto.fromJson(Map<String, dynamic> json) =
@@ -1018,17 +952,7 @@ abstract class _LocationDto extends LocationDto {
   @override
   String get region;
   @override
-  String get lat;
-  @override
-  String get lon;
-  @override
-  String get timezoneId;
-  @override
   String get localtime;
-  @override
-  int get localtimeEpoch;
-  @override
-  String get utcOffset;
   @override
   @JsonKey(ignore: true)
   _$$_LocationDtoCopyWith<_$_LocationDto> get copyWith =>

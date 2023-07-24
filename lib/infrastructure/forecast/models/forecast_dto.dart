@@ -25,22 +25,23 @@ class ForecastDto with _$ForecastDto {
 @freezed
 class CurrentDto with _$CurrentDto {
   const factory CurrentDto({
-    required String observationTime,
-    required int temperature,
-    required int weatherCode,
-    required List<String> weatherIcons,
+    @JsonKey(name: 'observation_time') required String observationTime,
+    @JsonKey(name: 'weather_code') required int weatherCode,
+    @JsonKey(name: 'weather_icons') required List<String> weatherIcons,
+    @JsonKey(name: 'weather_descriptions')
     required List<String> weatherDescriptions,
-    required int windSpeed,
-    required int windDegree,
-    required String windDir,
+    @JsonKey(name: 'wind_speed') required int windSpeed,
+    @JsonKey(name: 'wind_degree') required int windDegree,
+    @JsonKey(name: 'wind_dir') required String windDir,
+    @JsonKey(name: 'uv_index') required int uvIndex,
+    @JsonKey(name: 'cloudcover') required int cloudCover,
+    @JsonKey(name: 'is_day') required String isDay,
+    @JsonKey(name: 'feelslike') required int feelsLike,
+    required int temperature,
     required int pressure,
     required int precip,
     required int humidity,
-    required int cloudcover,
-    required int feelslike,
-    required int uvIndex,
     required int visibility,
-    required String isDay,
   }) = _CurrentDto;
 
   const CurrentDto._();
@@ -60,8 +61,8 @@ class CurrentDto with _$CurrentDto {
       pressure: pressure,
       precip: precip,
       humidity: humidity,
-      cloudcover: cloudcover,
-      feelslike: feelslike,
+      cloudcover: cloudCover,
+      feelslike: feelsLike,
       uvIndex: uvIndex,
       visibility: visibility,
       isDay: isDay);
@@ -73,12 +74,7 @@ class LocationDto with _$LocationDto {
     required String name,
     required String country,
     required String region,
-    required String lat,
-    required String lon,
-    required String timezoneId,
     required String localtime,
-    required int localtimeEpoch,
-    required String utcOffset,
   }) = _LocationDto;
 
   const LocationDto._();
@@ -87,15 +83,11 @@ class LocationDto with _$LocationDto {
       _$LocationDtoFromJson(json);
 
   Location toEntity() => Location(
-      name: name,
-      country: country,
-      region: region,
-      lat: lat,
-      lon: lon,
-      timezoneId: timezoneId,
-      localtime: localtime,
-      localtimeEpoch: localtimeEpoch,
-      utcOffset: utcOffset);
+        name: name,
+        country: country,
+        region: region,
+        localtime: localtime,
+      );
 }
 
 @freezed

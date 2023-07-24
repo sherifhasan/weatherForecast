@@ -638,12 +638,7 @@ mixin _$Location {
   String get name => throw _privateConstructorUsedError;
   String get country => throw _privateConstructorUsedError;
   String get region => throw _privateConstructorUsedError;
-  String get lat => throw _privateConstructorUsedError;
-  String get lon => throw _privateConstructorUsedError;
-  String get timezoneId => throw _privateConstructorUsedError;
   String get localtime => throw _privateConstructorUsedError;
-  int get localtimeEpoch => throw _privateConstructorUsedError;
-  String get utcOffset => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $LocationCopyWith<Location> get copyWith =>
@@ -655,16 +650,7 @@ abstract class $LocationCopyWith<$Res> {
   factory $LocationCopyWith(Location value, $Res Function(Location) then) =
       _$LocationCopyWithImpl<$Res, Location>;
   @useResult
-  $Res call(
-      {String name,
-      String country,
-      String region,
-      String lat,
-      String lon,
-      String timezoneId,
-      String localtime,
-      int localtimeEpoch,
-      String utcOffset});
+  $Res call({String name, String country, String region, String localtime});
 }
 
 /// @nodoc
@@ -683,12 +669,7 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
     Object? name = null,
     Object? country = null,
     Object? region = null,
-    Object? lat = null,
-    Object? lon = null,
-    Object? timezoneId = null,
     Object? localtime = null,
-    Object? localtimeEpoch = null,
-    Object? utcOffset = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -703,29 +684,9 @@ class _$LocationCopyWithImpl<$Res, $Val extends Location>
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      lat: null == lat
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as String,
-      lon: null == lon
-          ? _value.lon
-          : lon // ignore: cast_nullable_to_non_nullable
-              as String,
-      timezoneId: null == timezoneId
-          ? _value.timezoneId
-          : timezoneId // ignore: cast_nullable_to_non_nullable
-              as String,
       localtime: null == localtime
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
-              as String,
-      localtimeEpoch: null == localtimeEpoch
-          ? _value.localtimeEpoch
-          : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int,
-      utcOffset: null == utcOffset
-          ? _value.utcOffset
-          : utcOffset // ignore: cast_nullable_to_non_nullable
               as String,
     ) as $Val);
   }
@@ -738,16 +699,7 @@ abstract class _$$_LocationCopyWith<$Res> implements $LocationCopyWith<$Res> {
       __$$_LocationCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {String name,
-      String country,
-      String region,
-      String lat,
-      String lon,
-      String timezoneId,
-      String localtime,
-      int localtimeEpoch,
-      String utcOffset});
+  $Res call({String name, String country, String region, String localtime});
 }
 
 /// @nodoc
@@ -764,12 +716,7 @@ class __$$_LocationCopyWithImpl<$Res>
     Object? name = null,
     Object? country = null,
     Object? region = null,
-    Object? lat = null,
-    Object? lon = null,
-    Object? timezoneId = null,
     Object? localtime = null,
-    Object? localtimeEpoch = null,
-    Object? utcOffset = null,
   }) {
     return _then(_$_Location(
       name: null == name
@@ -784,29 +731,9 @@ class __$$_LocationCopyWithImpl<$Res>
           ? _value.region
           : region // ignore: cast_nullable_to_non_nullable
               as String,
-      lat: null == lat
-          ? _value.lat
-          : lat // ignore: cast_nullable_to_non_nullable
-              as String,
-      lon: null == lon
-          ? _value.lon
-          : lon // ignore: cast_nullable_to_non_nullable
-              as String,
-      timezoneId: null == timezoneId
-          ? _value.timezoneId
-          : timezoneId // ignore: cast_nullable_to_non_nullable
-              as String,
       localtime: null == localtime
           ? _value.localtime
           : localtime // ignore: cast_nullable_to_non_nullable
-              as String,
-      localtimeEpoch: null == localtimeEpoch
-          ? _value.localtimeEpoch
-          : localtimeEpoch // ignore: cast_nullable_to_non_nullable
-              as int,
-      utcOffset: null == utcOffset
-          ? _value.utcOffset
-          : utcOffset // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -819,12 +746,7 @@ class _$_Location implements _Location {
       {required this.name,
       required this.country,
       required this.region,
-      required this.lat,
-      required this.lon,
-      required this.timezoneId,
-      required this.localtime,
-      required this.localtimeEpoch,
-      required this.utcOffset});
+      required this.localtime});
 
   @override
   final String name;
@@ -833,21 +755,11 @@ class _$_Location implements _Location {
   @override
   final String region;
   @override
-  final String lat;
-  @override
-  final String lon;
-  @override
-  final String timezoneId;
-  @override
   final String localtime;
-  @override
-  final int localtimeEpoch;
-  @override
-  final String utcOffset;
 
   @override
   String toString() {
-    return 'Location(name: $name, country: $country, region: $region, lat: $lat, lon: $lon, timezoneId: $timezoneId, localtime: $localtime, localtimeEpoch: $localtimeEpoch, utcOffset: $utcOffset)';
+    return 'Location(name: $name, country: $country, region: $region, localtime: $localtime)';
   }
 
   @override
@@ -858,21 +770,13 @@ class _$_Location implements _Location {
             (identical(other.name, name) || other.name == name) &&
             (identical(other.country, country) || other.country == country) &&
             (identical(other.region, region) || other.region == region) &&
-            (identical(other.lat, lat) || other.lat == lat) &&
-            (identical(other.lon, lon) || other.lon == lon) &&
-            (identical(other.timezoneId, timezoneId) ||
-                other.timezoneId == timezoneId) &&
             (identical(other.localtime, localtime) ||
-                other.localtime == localtime) &&
-            (identical(other.localtimeEpoch, localtimeEpoch) ||
-                other.localtimeEpoch == localtimeEpoch) &&
-            (identical(other.utcOffset, utcOffset) ||
-                other.utcOffset == utcOffset));
+                other.localtime == localtime));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, country, region, lat, lon,
-      timezoneId, localtime, localtimeEpoch, utcOffset);
+  int get hashCode =>
+      Object.hash(runtimeType, name, country, region, localtime);
 
   @JsonKey(ignore: true)
   @override
@@ -886,12 +790,7 @@ abstract class _Location implements Location {
       {required final String name,
       required final String country,
       required final String region,
-      required final String lat,
-      required final String lon,
-      required final String timezoneId,
-      required final String localtime,
-      required final int localtimeEpoch,
-      required final String utcOffset}) = _$_Location;
+      required final String localtime}) = _$_Location;
 
   @override
   String get name;
@@ -900,17 +799,7 @@ abstract class _Location implements Location {
   @override
   String get region;
   @override
-  String get lat;
-  @override
-  String get lon;
-  @override
-  String get timezoneId;
-  @override
   String get localtime;
-  @override
-  int get localtimeEpoch;
-  @override
-  String get utcOffset;
   @override
   @JsonKey(ignore: true)
   _$$_LocationCopyWith<_$_Location> get copyWith =>
