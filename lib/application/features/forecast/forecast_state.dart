@@ -8,9 +8,5 @@ class ForecastState with _$ForecastState {
 
   const factory ForecastState.data(Forecast forecast) = _Data;
 
-  const factory ForecastState.failed(String errorMessage) = _Failed;
-
-  const factory ForecastState.noInternet() = _NoInternetConnection;
-
-  const factory ForecastState.generalError() = _GeneralError;
+  const factory ForecastState.error(String errorMessage) = _Failed;
 }

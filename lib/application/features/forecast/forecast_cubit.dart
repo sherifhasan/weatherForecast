@@ -29,16 +29,23 @@ class ForecastCubit extends Cubit<ForecastState> {
           emit(ForecastState.data(forecastDto.toEntity()));
         },
         failure: (errorMessage) {
-          emit(ForecastState.failed(errorMessage));
+          emit(ForecastState.error(errorMessage));
         },
       );
     } catch (error) {
       if (error is SocketException) {
-        emit(const ForecastState.noInternet());
+        emit(const ForecastState.error(ErrorMessages.noInternetError));
       } else {
-        emit(const ForecastState.generalError());
+        emit(const ForecastState.error(ErrorMessages.generalErrorMessage));
       }
     }
+  }
+
+  int convertTemperatureUnit(bool isFahrenheit, int temperature) {
+    if (isFahrenheit) {
+      return (temperature * 9 / 5 + 32).round();
+    }
+    return temperature;
   }
 
   Future<LocationResponse> getCityFromLocation() async {
@@ -69,7 +76,7 @@ class ForecastCubit extends Cubit<ForecastState> {
       if (placeMarks.first.locality != null &&
           placeMarks.first.country != null) {
         return LocationResponse.success(
-            '${placeMarks.first.country}, ${placeMarks.first.locality}');
+            '${placeMarks.first.locality}, ${placeMarks.first.country}');
       }
       return const LocationResponse.error(ErrorMessages.failedToGetCity);
     } catch (e) {

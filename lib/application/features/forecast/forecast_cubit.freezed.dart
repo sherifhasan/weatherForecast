@@ -21,9 +21,7 @@ mixin _$ForecastState {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
+    required TResult Function(String errorMessage) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -31,9 +29,7 @@ mixin _$ForecastState {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
+    TResult? Function(String errorMessage)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -41,9 +37,7 @@ mixin _$ForecastState {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
+    TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -52,9 +46,7 @@ mixin _$ForecastState {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
+    required TResult Function(_Failed value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,9 +54,7 @@ mixin _$ForecastState {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
+    TResult? Function(_Failed value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -72,9 +62,7 @@ mixin _$ForecastState {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
+    TResult Function(_Failed value)? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -138,9 +126,7 @@ class _$_Initial implements _Initial {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
+    required TResult Function(String errorMessage) error,
   }) {
     return initial();
   }
@@ -151,9 +137,7 @@ class _$_Initial implements _Initial {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
+    TResult? Function(String errorMessage)? error,
   }) {
     return initial?.call();
   }
@@ -164,9 +148,7 @@ class _$_Initial implements _Initial {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
+    TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -181,9 +163,7 @@ class _$_Initial implements _Initial {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
+    required TResult Function(_Failed value) error,
   }) {
     return initial(this);
   }
@@ -194,9 +174,7 @@ class _$_Initial implements _Initial {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
+    TResult? Function(_Failed value)? error,
   }) {
     return initial?.call(this);
   }
@@ -207,9 +185,7 @@ class _$_Initial implements _Initial {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
+    TResult Function(_Failed value)? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -263,9 +239,7 @@ class _$_Loading implements _Loading {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
+    required TResult Function(String errorMessage) error,
   }) {
     return loading();
   }
@@ -276,9 +250,7 @@ class _$_Loading implements _Loading {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
+    TResult? Function(String errorMessage)? error,
   }) {
     return loading?.call();
   }
@@ -289,9 +261,7 @@ class _$_Loading implements _Loading {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
+    TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -306,9 +276,7 @@ class _$_Loading implements _Loading {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
+    required TResult Function(_Failed value) error,
   }) {
     return loading(this);
   }
@@ -319,9 +287,7 @@ class _$_Loading implements _Loading {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
+    TResult? Function(_Failed value)? error,
   }) {
     return loading?.call(this);
   }
@@ -332,9 +298,7 @@ class _$_Loading implements _Loading {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
+    TResult Function(_Failed value)? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -424,9 +388,7 @@ class _$_Data implements _Data {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
+    required TResult Function(String errorMessage) error,
   }) {
     return data(forecast);
   }
@@ -437,9 +399,7 @@ class _$_Data implements _Data {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
+    TResult? Function(String errorMessage)? error,
   }) {
     return data?.call(forecast);
   }
@@ -450,9 +410,7 @@ class _$_Data implements _Data {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
+    TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -467,9 +425,7 @@ class _$_Data implements _Data {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
+    required TResult Function(_Failed value) error,
   }) {
     return data(this);
   }
@@ -480,9 +436,7 @@ class _$_Data implements _Data {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
+    TResult? Function(_Failed value)? error,
   }) {
     return data?.call(this);
   }
@@ -493,9 +447,7 @@ class _$_Data implements _Data {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
+    TResult Function(_Failed value)? error,
     required TResult orElse(),
   }) {
     if (data != null) {
@@ -552,7 +504,7 @@ class _$_Failed implements _Failed {
 
   @override
   String toString() {
-    return 'ForecastState.failed(errorMessage: $errorMessage)';
+    return 'ForecastState.error(errorMessage: $errorMessage)';
   }
 
   @override
@@ -579,11 +531,9 @@ class _$_Failed implements _Failed {
     required TResult Function() initial,
     required TResult Function() loading,
     required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
+    required TResult Function(String errorMessage) error,
   }) {
-    return failed(errorMessage);
+    return error(errorMessage);
   }
 
   @override
@@ -592,11 +542,9 @@ class _$_Failed implements _Failed {
     TResult? Function()? initial,
     TResult? Function()? loading,
     TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
+    TResult? Function(String errorMessage)? error,
   }) {
-    return failed?.call(errorMessage);
+    return error?.call(errorMessage);
   }
 
   @override
@@ -605,13 +553,11 @@ class _$_Failed implements _Failed {
     TResult Function()? initial,
     TResult Function()? loading,
     TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
+    TResult Function(String errorMessage)? error,
     required TResult orElse(),
   }) {
-    if (failed != null) {
-      return failed(errorMessage);
+    if (error != null) {
+      return error(errorMessage);
     }
     return orElse();
   }
@@ -622,11 +568,9 @@ class _$_Failed implements _Failed {
     required TResult Function(_Initial value) initial,
     required TResult Function(_Loading value) loading,
     required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
+    required TResult Function(_Failed value) error,
   }) {
-    return failed(this);
+    return error(this);
   }
 
   @override
@@ -635,11 +579,9 @@ class _$_Failed implements _Failed {
     TResult? Function(_Initial value)? initial,
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
+    TResult? Function(_Failed value)? error,
   }) {
-    return failed?.call(this);
+    return error?.call(this);
   }
 
   @override
@@ -648,13 +590,11 @@ class _$_Failed implements _Failed {
     TResult Function(_Initial value)? initial,
     TResult Function(_Loading value)? loading,
     TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
+    TResult Function(_Failed value)? error,
     required TResult orElse(),
   }) {
-    if (failed != null) {
-      return failed(this);
+    if (error != null) {
+      return error(this);
     }
     return orElse();
   }
@@ -667,256 +607,4 @@ abstract class _Failed implements ForecastState {
   @JsonKey(ignore: true)
   _$$_FailedCopyWith<_$_Failed> get copyWith =>
       throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$_NoInternetConnectionCopyWith<$Res> {
-  factory _$$_NoInternetConnectionCopyWith(_$_NoInternetConnection value,
-          $Res Function(_$_NoInternetConnection) then) =
-      __$$_NoInternetConnectionCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_NoInternetConnectionCopyWithImpl<$Res>
-    extends _$ForecastStateCopyWithImpl<$Res, _$_NoInternetConnection>
-    implements _$$_NoInternetConnectionCopyWith<$Res> {
-  __$$_NoInternetConnectionCopyWithImpl(_$_NoInternetConnection _value,
-      $Res Function(_$_NoInternetConnection) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_NoInternetConnection implements _NoInternetConnection {
-  const _$_NoInternetConnection();
-
-  @override
-  String toString() {
-    return 'ForecastState.noInternet()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_NoInternetConnection);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
-  }) {
-    return noInternet();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
-  }) {
-    return noInternet?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
-    required TResult orElse(),
-  }) {
-    if (noInternet != null) {
-      return noInternet();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
-  }) {
-    return noInternet(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
-  }) {
-    return noInternet?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
-    required TResult orElse(),
-  }) {
-    if (noInternet != null) {
-      return noInternet(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _NoInternetConnection implements ForecastState {
-  const factory _NoInternetConnection() = _$_NoInternetConnection;
-}
-
-/// @nodoc
-abstract class _$$_GeneralErrorCopyWith<$Res> {
-  factory _$$_GeneralErrorCopyWith(
-          _$_GeneralError value, $Res Function(_$_GeneralError) then) =
-      __$$_GeneralErrorCopyWithImpl<$Res>;
-}
-
-/// @nodoc
-class __$$_GeneralErrorCopyWithImpl<$Res>
-    extends _$ForecastStateCopyWithImpl<$Res, _$_GeneralError>
-    implements _$$_GeneralErrorCopyWith<$Res> {
-  __$$_GeneralErrorCopyWithImpl(
-      _$_GeneralError _value, $Res Function(_$_GeneralError) _then)
-      : super(_value, _then);
-}
-
-/// @nodoc
-
-class _$_GeneralError implements _GeneralError {
-  const _$_GeneralError();
-
-  @override
-  String toString() {
-    return 'ForecastState.generalError()';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GeneralError);
-  }
-
-  @override
-  int get hashCode => runtimeType.hashCode;
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(Forecast forecast) data,
-    required TResult Function(String errorMessage) failed,
-    required TResult Function() noInternet,
-    required TResult Function() generalError,
-  }) {
-    return generalError();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(Forecast forecast)? data,
-    TResult? Function(String errorMessage)? failed,
-    TResult? Function()? noInternet,
-    TResult? Function()? generalError,
-  }) {
-    return generalError?.call();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(Forecast forecast)? data,
-    TResult Function(String errorMessage)? failed,
-    TResult Function()? noInternet,
-    TResult Function()? generalError,
-    required TResult orElse(),
-  }) {
-    if (generalError != null) {
-      return generalError();
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Data value) data,
-    required TResult Function(_Failed value) failed,
-    required TResult Function(_NoInternetConnection value) noInternet,
-    required TResult Function(_GeneralError value) generalError,
-  }) {
-    return generalError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Data value)? data,
-    TResult? Function(_Failed value)? failed,
-    TResult? Function(_NoInternetConnection value)? noInternet,
-    TResult? Function(_GeneralError value)? generalError,
-  }) {
-    return generalError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Data value)? data,
-    TResult Function(_Failed value)? failed,
-    TResult Function(_NoInternetConnection value)? noInternet,
-    TResult Function(_GeneralError value)? generalError,
-    required TResult orElse(),
-  }) {
-    if (generalError != null) {
-      return generalError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _GeneralError implements ForecastState {
-  const factory _GeneralError() = _$_GeneralError;
 }
