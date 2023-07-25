@@ -13,7 +13,7 @@ Flutter Hooks is used for stateful logic within functional widgets.
 
 ### Search Functionality:
 
-Provide a search TextField where users can enter the name of any city or location to view its weather information.
+    Provide a search TextField where users can enter the name of any city to view its weather information.
 
 ### Responsive Layout:
 
