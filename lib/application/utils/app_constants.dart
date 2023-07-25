@@ -1,7 +1,7 @@
 class ApiConstants {
   static const String _baseUrl = 'http://api.weatherstack.com/';
   static const String _apiUrl = 'current?';
-  static const String _accessKey = 'de35642f6c1478434d254926f88924aa';
+  static const String _accessKey = '3026650498b9dbf5c0cf7287f0324e0c';
 
   static String forecastApiApiUrl(String query) =>
       '$_baseUrl${_apiUrl}access_key=$_accessKey&query=$query';
