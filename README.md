@@ -9,7 +9,6 @@ Flutter Hooks is used for stateful logic within functional widgets.
 ## Folder Structure
 
 ```bash
-.
 ├── application
 │   ├── features
 │   │   └── forecast
