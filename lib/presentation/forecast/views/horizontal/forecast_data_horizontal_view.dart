@@ -4,11 +4,10 @@ import 'package:intl/intl.dart';
 import 'package:weather_forecast/application/features/forecast/forecast_cubit.dart';
 import 'package:weather_forecast/domain/models/forecast.dart';
 import 'package:weather_forecast/presentation/forecast/views/forecast_details_expanded_view.dart';
+import 'package:weather_forecast/presentation/forecast/views/horizontal/more_details_horizontal_view.dart';
 
-import 'more_details_view.dart';
-
-class ForecastDataView extends HookWidget {
-  const ForecastDataView(
+class ForecastDataHorizontalView extends HookWidget {
+  const ForecastDataHorizontalView(
       {required this.forecast,
       required this.forecastCubit,
       required this.isFahrenheit,
@@ -21,18 +20,18 @@ class ForecastDataView extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final isExpanded = useState(false);
-    return SingleChildScrollView(
-      physics: const AlwaysScrollableScrollPhysics(),
-      child: Column(
+    return Card(
+      margin: const EdgeInsets.all(16),
+      color: Colors.lightBlue.shade400,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Card(
-            margin: const EdgeInsets.all(16),
-            color: Colors.lightBlue.shade400,
+          Padding(
+            padding: const EdgeInsets.all(8.0),
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 8),
-                Text(forecast.location.name.split('(').first,
+                Text(forecast.location.name,
                     textAlign: TextAlign.center,
                     style: Theme.of(context)
                         .textTheme
@@ -61,26 +60,36 @@ class ForecastDataView extends HookWidget {
                         .headlineMedium
                         ?.copyWith(fontSize: 32, color: Colors.white)),
                 const SizedBox(height: 5),
-                TextButton(
-                  onPressed: () => isExpanded.value = !isExpanded.value,
-                  child: Text('show more details',
-                      style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                          fontSize: 18,
-                          color: Colors.white,
-                          decoration: TextDecoration.underline,
-                          decorationColor: Colors.white),
-                      textAlign: TextAlign.center),
-                ),
-                ForecastDetailsExpandedView(
-                  expand: isExpanded.value,
-                  child: MoreDetailsView(
-                      forecast: forecast,
-                      forecastCubit: forecastCubit,
-                      isFahrenheit: isFahrenheit),
+                Row(
+                  children: [
+                    TextButton(
+                      onPressed: () => isExpanded.value = !isExpanded.value,
+                      child: Text('more details =>',
+                          style: Theme.of(context)
+                              .textTheme
+                              .titleLarge
+                              ?.copyWith(
+                                  fontSize: 18,
+                                  color: Colors.white,
+                                  decoration: TextDecoration.underline,
+                                  decorationColor: Colors.white),
+                          textAlign: TextAlign.center),
+                    ),
+                  ],
                 ),
               ],
             ),
           ),
+          if (isExpanded.value)
+            Expanded(
+              child: ForecastDetailsExpandedView(
+                expand: isExpanded.value,
+                child: MoreDetailsHorizontalView(
+                    forecast: forecast,
+                    forecastCubit: forecastCubit,
+                    isFahrenheit: isFahrenheit),
+              ),
+            ),
         ],
       ),
     );
