@@ -5,8 +5,11 @@ class ForecastLoadingView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CircularProgressIndicator(),
+    return Center(
+      child:  Padding(
+        padding: EdgeInsets.only(top: MediaQuery.sizeOf(context).height/3),
+        child: const CircularProgressIndicator(),
+      ),
     );
   }
 }
