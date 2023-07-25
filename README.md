@@ -4,6 +4,21 @@ The app allows users to effortlessly access weather details for their current ci
 dependency injection, and employs the BLoC (Business Logic Component) pattern for state management.
 Flutter Hooks is used for stateful logic within functional widgets.
 
+## Key Features
+
+Current Weather Information:
+
+Display the current weather details, including temperature, weather condition, humidity, wind speed, and wind direction.
+Support displaying temperature in Celsius and Fahrenheit units, with a toggle switch to switch between them.
+
+Search Functionality:
+
+Provide a search TextField where users can enter the name of any city or location to view its weather information.
+
+Responsive Layout:
+
+Support both vertical and horizontal layout orientations for optimal user experience on smartphones and tablets.
+Details view represented in a expanded view for a nice UI experiance   
 
 ## Folder Structure
 
