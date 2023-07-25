@@ -11,6 +11,7 @@ class ForecastErrorView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: FractionalOffset.center,
+      padding: EdgeInsets.only(top: MediaQuery.sizeOf(context).height / 3),
       child: Column(
         children: [
           Text(error,
@@ -18,9 +19,14 @@ class ForecastErrorView extends StatelessWidget {
                   fontSize: 18,
                   fontWeight: FontWeight.w600,
                   color: Colors.red)),
-          ElevatedButton(
+          const SizedBox(
+            height: 20,
+          ),
+          TextButton(
             onPressed: callback,
-            child: const Text('Retry'),
+            child: const Text('Retry',
+                style: TextStyle(
+                    fontSize: 18, decoration: TextDecoration.underline)),
           ),
         ],
       ),
