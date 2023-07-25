@@ -17,8 +17,8 @@ Provide a search TextField where users can enter the name of any city or locatio
 
 Responsive Layout:
 
-Support both vertical and horizontal layout orientations for optimal user experience on smartphones and tablets.
-Details view represented in a expanded view for a nice UI experiance   
+1. Support both vertical and horizontal layout orientations for optimal user experience on smartphones and tablets.
+2. Details view represented in a expanded view for a nice UI experiance   
 
 ## Folder Structure
 
