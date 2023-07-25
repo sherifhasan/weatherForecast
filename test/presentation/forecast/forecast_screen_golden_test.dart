@@ -12,10 +12,10 @@ import 'package:weather_forecast/presentation/forecast/forecast_screen.dart';
 
 class MockRemoteDataSource extends Mock implements DataSource {}
 
-class MockSearchRepository extends Mock implements ForecastRepository {
+class MockForecastRepository extends Mock implements ForecastRepository {
   final MockRemoteDataSource mockRemoteDataSource;
 
-  MockSearchRepository(this.mockRemoteDataSource);
+  MockForecastRepository(this.mockRemoteDataSource);
 }
 
 void main() {
@@ -27,7 +27,7 @@ void main() {
           (tester) async {
         await tester.pumpWidgetBuilder(BlocProvider(
             create: (context) =>
-                ForecastCubit(MockSearchRepository(MockRemoteDataSource())),
+                ForecastCubit(MockForecastRepository(MockRemoteDataSource())),
             child: const ForecastScreen()));
         await multiScreenGolden(
           tester,
