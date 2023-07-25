@@ -6,7 +6,7 @@ dependency injection, and employs the BLoC (Business Logic Component) pattern fo
 Flutter Hooks is used for stateful logic within functional widgets.
 
 
-## Floder Structure
+## Folder Structure
 
 ```bash
 .
