@@ -1,4 +1,4 @@
-# Weather Forecast
+# Weather Forecast  <img src="https://img.shields.io/badge/made%20with-dart-blue.svg" alt="made with dart">
 
 The app allows users to effortlessly access weather details for their current city using location services or explore the weather in any desired location through a search functionality. It follows the Domain-Driven Design (DDD) architecture for a clear separation of concerns, utilizes GetIt for
 dependency injection, and employs the BLoC (Business Logic Component) pattern for state management.
@@ -41,11 +41,14 @@ Flutter Hooks is used for stateful logic within functional widgets.
     └── forecast
         ├── forecast_screen.dart
         └── views
-            ├── forecast_data_view.dart
             ├── forecast_details_expanded_view.dart
             ├── forecast_error_view.dart
             ├── forecast_loading_view.dart
-            ├── more_details_view.dart
+            ├── horizontal
+            │   ├── forecast_data_horizontal_view.dart
+            │   └── more_details_horizontal_view.dart
+            ├── vertical
+            │   ├── forecast_data_vertical_view.dart
+            │   └── more_details_vertical_view.dart
             └── views.dart
-
 ```
