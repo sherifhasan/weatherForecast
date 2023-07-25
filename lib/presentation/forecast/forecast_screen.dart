@@ -4,9 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:weather_forecast/application/features/forecast/forecast_cubit.dart';
-import 'package:weather_forecast/presentation/forecast/views/horizontal/forecast_data_horizontal_view.dart';
-import 'package:weather_forecast/presentation/forecast/views/forecast_error_view.dart';
-import 'package:weather_forecast/presentation/forecast/views/forecast_loading_view.dart';
 
 import 'views/views.dart';
 
