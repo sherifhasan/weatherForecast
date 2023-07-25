@@ -39,7 +39,7 @@ class CurrentDto with _$CurrentDto {
     @JsonKey(name: 'feelslike') required int feelsLike,
     required int temperature,
     required int pressure,
-    required int precip,
+    required double precip,
     required int humidity,
     required int visibility,
   }) = _CurrentDto;
@@ -50,22 +50,18 @@ class CurrentDto with _$CurrentDto {
       _$CurrentDtoFromJson(json);
 
   Current toEntity() => Current(
-      observationTime: observationTime,
-      temperature: temperature,
-      weatherCode: weatherCode,
-      weatherIcons: weatherIcons,
-      weatherDescriptions: weatherDescriptions,
-      windSpeed: windSpeed,
-      windDegree: windDegree,
-      windDir: windDir,
-      pressure: pressure,
-      precip: precip,
-      humidity: humidity,
-      cloudcover: cloudCover,
-      feelslike: feelsLike,
-      uvIndex: uvIndex,
-      visibility: visibility,
-      isDay: isDay);
+        observationTime: observationTime,
+        temperature: temperature,
+        weatherIcons: weatherIcons,
+        weatherDescriptions: weatherDescriptions,
+        windSpeed: windSpeed,
+        windDir: windDir,
+        pressure: pressure,
+        precip: precip,
+        humidity: humidity,
+        cloudcover: cloudCover,
+        feelslike: feelsLike,
+      );
 }
 
 @freezed

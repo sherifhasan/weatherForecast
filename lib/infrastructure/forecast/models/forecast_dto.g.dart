@@ -39,7 +39,7 @@ _$_CurrentDto _$$_CurrentDtoFromJson(Map<String, dynamic> json) =>
       feelsLike: json['feelslike'] as int,
       temperature: json['temperature'] as int,
       pressure: json['pressure'] as int,
-      precip: json['precip'] as int,
+      precip: (json['precip'] as num).toDouble(),
       humidity: json['humidity'] as int,
       visibility: json['visibility'] as int,
     );

@@ -272,7 +272,7 @@ mixin _$CurrentDto {
   int get feelsLike => throw _privateConstructorUsedError;
   int get temperature => throw _privateConstructorUsedError;
   int get pressure => throw _privateConstructorUsedError;
-  int get precip => throw _privateConstructorUsedError;
+  double get precip => throw _privateConstructorUsedError;
   int get humidity => throw _privateConstructorUsedError;
   int get visibility => throw _privateConstructorUsedError;
 
@@ -302,7 +302,7 @@ abstract class $CurrentDtoCopyWith<$Res> {
       @JsonKey(name: 'feelslike') int feelsLike,
       int temperature,
       int pressure,
-      int precip,
+      double precip,
       int humidity,
       int visibility});
 }
@@ -393,7 +393,7 @@ class _$CurrentDtoCopyWithImpl<$Res, $Val extends CurrentDto>
       precip: null == precip
           ? _value.precip
           : precip // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -428,7 +428,7 @@ abstract class _$$_CurrentDtoCopyWith<$Res>
       @JsonKey(name: 'feelslike') int feelsLike,
       int temperature,
       int pressure,
-      int precip,
+      double precip,
       int humidity,
       int visibility});
 }
@@ -517,7 +517,7 @@ class __$$_CurrentDtoCopyWithImpl<$Res>
       precip: null == precip
           ? _value.precip
           : precip // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -609,7 +609,7 @@ class _$_CurrentDto extends _CurrentDto {
   @override
   final int pressure;
   @override
-  final int precip;
+  final double precip;
   @override
   final int humidity;
   @override
@@ -706,7 +706,7 @@ abstract class _CurrentDto extends CurrentDto {
       @JsonKey(name: 'feelslike') required final int feelsLike,
       required final int temperature,
       required final int pressure,
-      required final int precip,
+      required final double precip,
       required final int humidity,
       required final int visibility}) = _$_CurrentDto;
   const _CurrentDto._() : super._();
@@ -752,7 +752,7 @@ abstract class _CurrentDto extends CurrentDto {
   @override
   int get pressure;
   @override
-  int get precip;
+  double get precip;
   @override
   int get humidity;
   @override

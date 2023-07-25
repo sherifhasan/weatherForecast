@@ -15,20 +15,16 @@ class Current with _$Current {
   const factory Current({
     required String observationTime,
     required int temperature,
-    required int weatherCode,
     required List<String> weatherIcons,
     required List<String> weatherDescriptions,
     required int windSpeed,
-    required int windDegree,
     required String windDir,
     required int pressure,
-    required int precip,
+    required double precip,
     required int humidity,
     required int cloudcover,
     required int feelslike,
-    required int uvIndex,
-    required int visibility,
-    required String isDay,
+
   }) = _Current;
 }
 

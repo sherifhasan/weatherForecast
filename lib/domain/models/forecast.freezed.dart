@@ -176,20 +176,15 @@ abstract class _Forecast implements Forecast {
 mixin _$Current {
   String get observationTime => throw _privateConstructorUsedError;
   int get temperature => throw _privateConstructorUsedError;
-  int get weatherCode => throw _privateConstructorUsedError;
   List<String> get weatherIcons => throw _privateConstructorUsedError;
   List<String> get weatherDescriptions => throw _privateConstructorUsedError;
   int get windSpeed => throw _privateConstructorUsedError;
-  int get windDegree => throw _privateConstructorUsedError;
   String get windDir => throw _privateConstructorUsedError;
   int get pressure => throw _privateConstructorUsedError;
-  int get precip => throw _privateConstructorUsedError;
+  double get precip => throw _privateConstructorUsedError;
   int get humidity => throw _privateConstructorUsedError;
   int get cloudcover => throw _privateConstructorUsedError;
   int get feelslike => throw _privateConstructorUsedError;
-  int get uvIndex => throw _privateConstructorUsedError;
-  int get visibility => throw _privateConstructorUsedError;
-  String get isDay => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CurrentCopyWith<Current> get copyWith => throw _privateConstructorUsedError;
@@ -203,20 +198,15 @@ abstract class $CurrentCopyWith<$Res> {
   $Res call(
       {String observationTime,
       int temperature,
-      int weatherCode,
       List<String> weatherIcons,
       List<String> weatherDescriptions,
       int windSpeed,
-      int windDegree,
       String windDir,
       int pressure,
-      int precip,
+      double precip,
       int humidity,
       int cloudcover,
-      int feelslike,
-      int uvIndex,
-      int visibility,
-      String isDay});
+      int feelslike});
 }
 
 /// @nodoc
@@ -234,20 +224,15 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
   $Res call({
     Object? observationTime = null,
     Object? temperature = null,
-    Object? weatherCode = null,
     Object? weatherIcons = null,
     Object? weatherDescriptions = null,
     Object? windSpeed = null,
-    Object? windDegree = null,
     Object? windDir = null,
     Object? pressure = null,
     Object? precip = null,
     Object? humidity = null,
     Object? cloudcover = null,
     Object? feelslike = null,
-    Object? uvIndex = null,
-    Object? visibility = null,
-    Object? isDay = null,
   }) {
     return _then(_value.copyWith(
       observationTime: null == observationTime
@@ -257,10 +242,6 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
       temperature: null == temperature
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as int,
-      weatherCode: null == weatherCode
-          ? _value.weatherCode
-          : weatherCode // ignore: cast_nullable_to_non_nullable
               as int,
       weatherIcons: null == weatherIcons
           ? _value.weatherIcons
@@ -274,10 +255,6 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
               as int,
-      windDegree: null == windDegree
-          ? _value.windDegree
-          : windDegree // ignore: cast_nullable_to_non_nullable
-              as int,
       windDir: null == windDir
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
@@ -289,7 +266,7 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
       precip: null == precip
           ? _value.precip
           : precip // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -302,18 +279,6 @@ class _$CurrentCopyWithImpl<$Res, $Val extends Current>
           ? _value.feelslike
           : feelslike // ignore: cast_nullable_to_non_nullable
               as int,
-      uvIndex: null == uvIndex
-          ? _value.uvIndex
-          : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      visibility: null == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as int,
-      isDay: null == isDay
-          ? _value.isDay
-          : isDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ) as $Val);
   }
 }
@@ -328,20 +293,15 @@ abstract class _$$_CurrentCopyWith<$Res> implements $CurrentCopyWith<$Res> {
   $Res call(
       {String observationTime,
       int temperature,
-      int weatherCode,
       List<String> weatherIcons,
       List<String> weatherDescriptions,
       int windSpeed,
-      int windDegree,
       String windDir,
       int pressure,
-      int precip,
+      double precip,
       int humidity,
       int cloudcover,
-      int feelslike,
-      int uvIndex,
-      int visibility,
-      String isDay});
+      int feelslike});
 }
 
 /// @nodoc
@@ -356,20 +316,15 @@ class __$$_CurrentCopyWithImpl<$Res>
   $Res call({
     Object? observationTime = null,
     Object? temperature = null,
-    Object? weatherCode = null,
     Object? weatherIcons = null,
     Object? weatherDescriptions = null,
     Object? windSpeed = null,
-    Object? windDegree = null,
     Object? windDir = null,
     Object? pressure = null,
     Object? precip = null,
     Object? humidity = null,
     Object? cloudcover = null,
     Object? feelslike = null,
-    Object? uvIndex = null,
-    Object? visibility = null,
-    Object? isDay = null,
   }) {
     return _then(_$_Current(
       observationTime: null == observationTime
@@ -379,10 +334,6 @@ class __$$_CurrentCopyWithImpl<$Res>
       temperature: null == temperature
           ? _value.temperature
           : temperature // ignore: cast_nullable_to_non_nullable
-              as int,
-      weatherCode: null == weatherCode
-          ? _value.weatherCode
-          : weatherCode // ignore: cast_nullable_to_non_nullable
               as int,
       weatherIcons: null == weatherIcons
           ? _value._weatherIcons
@@ -396,10 +347,6 @@ class __$$_CurrentCopyWithImpl<$Res>
           ? _value.windSpeed
           : windSpeed // ignore: cast_nullable_to_non_nullable
               as int,
-      windDegree: null == windDegree
-          ? _value.windDegree
-          : windDegree // ignore: cast_nullable_to_non_nullable
-              as int,
       windDir: null == windDir
           ? _value.windDir
           : windDir // ignore: cast_nullable_to_non_nullable
@@ -411,7 +358,7 @@ class __$$_CurrentCopyWithImpl<$Res>
       precip: null == precip
           ? _value.precip
           : precip // ignore: cast_nullable_to_non_nullable
-              as int,
+              as double,
       humidity: null == humidity
           ? _value.humidity
           : humidity // ignore: cast_nullable_to_non_nullable
@@ -424,18 +371,6 @@ class __$$_CurrentCopyWithImpl<$Res>
           ? _value.feelslike
           : feelslike // ignore: cast_nullable_to_non_nullable
               as int,
-      uvIndex: null == uvIndex
-          ? _value.uvIndex
-          : uvIndex // ignore: cast_nullable_to_non_nullable
-              as int,
-      visibility: null == visibility
-          ? _value.visibility
-          : visibility // ignore: cast_nullable_to_non_nullable
-              as int,
-      isDay: null == isDay
-          ? _value.isDay
-          : isDay // ignore: cast_nullable_to_non_nullable
-              as String,
     ));
   }
 }
@@ -446,20 +381,15 @@ class _$_Current implements _Current {
   const _$_Current(
       {required this.observationTime,
       required this.temperature,
-      required this.weatherCode,
       required final List<String> weatherIcons,
       required final List<String> weatherDescriptions,
       required this.windSpeed,
-      required this.windDegree,
       required this.windDir,
       required this.pressure,
       required this.precip,
       required this.humidity,
       required this.cloudcover,
-      required this.feelslike,
-      required this.uvIndex,
-      required this.visibility,
-      required this.isDay})
+      required this.feelslike})
       : _weatherIcons = weatherIcons,
         _weatherDescriptions = weatherDescriptions;
 
@@ -467,8 +397,6 @@ class _$_Current implements _Current {
   final String observationTime;
   @override
   final int temperature;
-  @override
-  final int weatherCode;
   final List<String> _weatherIcons;
   @override
   List<String> get weatherIcons {
@@ -489,29 +417,21 @@ class _$_Current implements _Current {
   @override
   final int windSpeed;
   @override
-  final int windDegree;
-  @override
   final String windDir;
   @override
   final int pressure;
   @override
-  final int precip;
+  final double precip;
   @override
   final int humidity;
   @override
   final int cloudcover;
   @override
   final int feelslike;
-  @override
-  final int uvIndex;
-  @override
-  final int visibility;
-  @override
-  final String isDay;
 
   @override
   String toString() {
-    return 'Current(observationTime: $observationTime, temperature: $temperature, weatherCode: $weatherCode, weatherIcons: $weatherIcons, weatherDescriptions: $weatherDescriptions, windSpeed: $windSpeed, windDegree: $windDegree, windDir: $windDir, pressure: $pressure, precip: $precip, humidity: $humidity, cloudcover: $cloudcover, feelslike: $feelslike, uvIndex: $uvIndex, visibility: $visibility, isDay: $isDay)';
+    return 'Current(observationTime: $observationTime, temperature: $temperature, weatherIcons: $weatherIcons, weatherDescriptions: $weatherDescriptions, windSpeed: $windSpeed, windDir: $windDir, pressure: $pressure, precip: $precip, humidity: $humidity, cloudcover: $cloudcover, feelslike: $feelslike)';
   }
 
   @override
@@ -523,16 +443,12 @@ class _$_Current implements _Current {
                 other.observationTime == observationTime) &&
             (identical(other.temperature, temperature) ||
                 other.temperature == temperature) &&
-            (identical(other.weatherCode, weatherCode) ||
-                other.weatherCode == weatherCode) &&
             const DeepCollectionEquality()
                 .equals(other._weatherIcons, _weatherIcons) &&
             const DeepCollectionEquality()
                 .equals(other._weatherDescriptions, _weatherDescriptions) &&
             (identical(other.windSpeed, windSpeed) ||
                 other.windSpeed == windSpeed) &&
-            (identical(other.windDegree, windDegree) ||
-                other.windDegree == windDegree) &&
             (identical(other.windDir, windDir) || other.windDir == windDir) &&
             (identical(other.pressure, pressure) ||
                 other.pressure == pressure) &&
@@ -542,11 +458,7 @@ class _$_Current implements _Current {
             (identical(other.cloudcover, cloudcover) ||
                 other.cloudcover == cloudcover) &&
             (identical(other.feelslike, feelslike) ||
-                other.feelslike == feelslike) &&
-            (identical(other.uvIndex, uvIndex) || other.uvIndex == uvIndex) &&
-            (identical(other.visibility, visibility) ||
-                other.visibility == visibility) &&
-            (identical(other.isDay, isDay) || other.isDay == isDay));
+                other.feelslike == feelslike));
   }
 
   @override
@@ -554,20 +466,15 @@ class _$_Current implements _Current {
       runtimeType,
       observationTime,
       temperature,
-      weatherCode,
       const DeepCollectionEquality().hash(_weatherIcons),
       const DeepCollectionEquality().hash(_weatherDescriptions),
       windSpeed,
-      windDegree,
       windDir,
       pressure,
       precip,
       humidity,
       cloudcover,
-      feelslike,
-      uvIndex,
-      visibility,
-      isDay);
+      feelslike);
 
   @JsonKey(ignore: true)
   @override
@@ -580,27 +487,20 @@ abstract class _Current implements Current {
   const factory _Current(
       {required final String observationTime,
       required final int temperature,
-      required final int weatherCode,
       required final List<String> weatherIcons,
       required final List<String> weatherDescriptions,
       required final int windSpeed,
-      required final int windDegree,
       required final String windDir,
       required final int pressure,
-      required final int precip,
+      required final double precip,
       required final int humidity,
       required final int cloudcover,
-      required final int feelslike,
-      required final int uvIndex,
-      required final int visibility,
-      required final String isDay}) = _$_Current;
+      required final int feelslike}) = _$_Current;
 
   @override
   String get observationTime;
   @override
   int get temperature;
-  @override
-  int get weatherCode;
   @override
   List<String> get weatherIcons;
   @override
@@ -608,25 +508,17 @@ abstract class _Current implements Current {
   @override
   int get windSpeed;
   @override
-  int get windDegree;
-  @override
   String get windDir;
   @override
   int get pressure;
   @override
-  int get precip;
+  double get precip;
   @override
   int get humidity;
   @override
   int get cloudcover;
   @override
   int get feelslike;
-  @override
-  int get uvIndex;
-  @override
-  int get visibility;
-  @override
-  String get isDay;
   @override
   @JsonKey(ignore: true)
   _$$_CurrentCopyWith<_$_Current> get copyWith =>
