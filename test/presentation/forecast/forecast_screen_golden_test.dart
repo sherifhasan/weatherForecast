@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:golden_toolkit/golden_toolkit.dart';
@@ -28,7 +29,7 @@ void main() {
         await tester.pumpWidgetBuilder(BlocProvider(
             create: (context) =>
                 ForecastCubit(MockForecastRepository(MockRemoteDataSource())),
-            child: const ForecastScreen()));
+            child: const MaterialApp(home: ForecastScreen())));
         await multiScreenGolden(
           tester,
           'forecast_screen',
