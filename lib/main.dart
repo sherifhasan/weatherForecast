@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_forecast/application/features/forecast/forecast_cubit.dart';
-
+import 'package:weather_forecast/presentation/forecast/forecast_screen.dart';
 import 'injection.dart';
 
 Future<void> main() async {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           useMaterial3: true,
         ),
         debugShowCheckedModeBanner: false,
-        home: const Placeholder(),
+        home: const ForecastScreen(),
       ),
     );
   }
