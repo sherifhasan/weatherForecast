@@ -8,8 +8,8 @@ Flutter Hooks is used for stateful logic within functional widgets.
 
 ### Current Weather Information:
 
-1.Display the current weather details, including temperature, weather condition, humidity, wind speed, and wind direction.
-2.Support displaying temperature in Celsius and Fahrenheit units, with a toggle switch to switch between them.
+1. Display the current weather details, including temperature, weather condition, humidity, wind speed, and wind direction.
+2. Support displaying temperature in Celsius and Fahrenheit units, with a toggle switch to switch between them.
 
 ### Search Functionality:
 
